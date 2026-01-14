@@ -1,11 +1,15 @@
+import Footer from '@/components/shared/Footer';
+import Navbar from '@/components/shared/Navbar';
 import React from 'react';
 
 const DashboardLayout = ({ children }) => {
     return (
-        <div>
-            <p>Main Nav</p>
-            {children}
-            <p>Mian Footer</p>
+        <div className='min-h-screen min-w-screen flex flex-col'>
+            <Navbar />
+            <div className='flex-1'>
+                {children}
+            </div>
+            <Footer />
         </div>
     );
 };
